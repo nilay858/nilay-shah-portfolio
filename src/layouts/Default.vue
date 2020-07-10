@@ -11,7 +11,7 @@
             <h1 class="w-40 text-3xl">Nilay Shah</h1>
           </g-link>
           <g-link v-else to="/">
-            <g-image src="../../static/logo_dark_mode.svg" class="w-40" alt="logo" />
+            <h1 class="w-40 text-3xl text-white">Nilay Shah</h1>
           </g-link>
         </div>
         <div class="block lg:hidden">
