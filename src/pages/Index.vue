@@ -118,7 +118,13 @@
           </p>
 
           <div class="text-lg sm:text-lg mb-16">
-            <form name="contact" method="POST" class="mb-12" data-netlify="true">
+            <form
+              name="contact"
+              method="POST"
+              class="mb-12"
+              data-netlify-recaptcha="true"
+              data-netlify="true"
+            >
               <div class="flex flex-wrap mb-6 -mx-4">
                 <div class="w-full md:w-1/2 mb-6 md:mb-0 px-4">
                   <label class="block mb-2 text-copy-primary" for="name">Name</label>
@@ -158,6 +164,9 @@
                   placeholder="Enter your message here."
                   required
                 ></textarea>
+              </div>
+              <div class="flex justify-end w-full">
+                <div data-netlify-recaptcha="true"></div>
               </div>
 
               <div class="flex justify-end w-full">
