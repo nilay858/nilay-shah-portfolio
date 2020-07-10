@@ -855,10 +855,10 @@
     sort-package-json "^1.15.0"
     update-notifier "^4.1.0"
 
-"@gridsome/plugin-sitemap@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@gridsome/plugin-sitemap/-/plugin-sitemap-0.3.0.tgz#2ab1a0c0bc73ab4d7724fbedf4994daaf77c99b5"
-  integrity sha512-T7Av4kHOUJW0wynuQTY6sL6pk4NT2sZ34zarDaMF+spr+iqXDrXJsyhOd3+d4C/EfmoP+K2DizQRRR1efACaPA==
+"@gridsome/plugin-sitemap@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@gridsome/plugin-sitemap/-/plugin-sitemap-0.4.0.tgz#dbd51c747cb8d6d9c827104c832e35a5aa4807af"
+  integrity sha512-fAwC/7+jCM6uTx7m7cEHBeoZOuxkuXy9LCDS65VUiSMgelmMjQBcrsCBFWULaE65sl/wPB6eGRmCIG+d38L6Qw==
   dependencies:
     fs-extra "^7.0.0"
     micromatch "^3.1.10"
@@ -876,10 +876,10 @@
     mime-types "^2.1.21"
     slash "^2.0.0"
 
-"@gridsome/transformer-remark@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@gridsome/transformer-remark/-/transformer-remark-0.6.0.tgz#5b7c34d3daf872fd8eb2679e2c3b79c64aa0167c"
-  integrity sha512-2/mX3MIlchfLaRCaFG0s6A8iqEo160dFL1rqM20gxmA+n8ACFE+4PmWHoBHGpjevd5ROsPhyAn9LaTacdsCIpA==
+"@gridsome/transformer-remark@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@gridsome/transformer-remark/-/transformer-remark-0.6.1.tgz#0fa71527289a21ff9cfeaf3a07c236b4165772ed"
+  integrity sha512-2GHBYB9qP4MvOK8gVTZvSzzaeP5qsjqO+1zscYQ4rfstsv7/BjBQ54oGWTMsg9UqYJLxZAl45eEhgkM6CyO0lg==
   dependencies:
     gray-matter "^4.0.2"
     hash-sum "^1.0.2"
@@ -899,17 +899,17 @@
     unist-util-visit "^1.4.0"
     vfile "^4.0.0"
 
-"@gridsome/vue-remark@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.2.1.tgz#c5e16d0b1c52f534a5bc0534f430f3b5853ec5a5"
-  integrity sha512-8wo/kPLb9vGOxwlkBHd0je8glUytBMGhUKHUto89hetxc680l0jN9Ctt06UN+iX2EIymsX+uFAW8RkVyUGcvvg==
+"@gridsome/vue-remark@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.2.2.tgz#451518e646f0f729a981c44d26788dc22cefebe8"
+  integrity sha512-lnu5bK8HbcfWa4311pO+seOR3vgvhsVQ9xqZ5P6J9GJRe7RtXQJyJ8Ia2Y7SPeWQwkgM72aFxe6tfH4jWhj6mQ==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/parser" "^7.0.0"
     "@babel/preset-env" "^7.0.0"
     "@babel/traverse" "^7.0.0"
     "@gridsome/source-filesystem" "^0.6.2"
-    "@gridsome/transformer-remark" "^0.6.0"
+    "@gridsome/transformer-remark" "^0.6.1"
     hash-sum "^1.0.2"
     hast-util-to-html "^5.0.0"
     he "^1.2.0"
@@ -4322,10 +4322,10 @@ gridsome-plugin-tailwindcss@^3.0.1:
     postcss-preset-env "^6.7.0"
     tailwindcss ">=1.4"
 
-gridsome@^0.7.17:
-  version "0.7.17"
-  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.7.17.tgz#c15fc04d26ce9ff635d956c23358498d87b672dd"
-  integrity sha512-3Kooras77KNNO2lmRndrhlvJpH7UYZNO9BfKJmZXHAQrWXRHZKKBmdFHJISjfUfvArsiYiJjcVXXsTxEpNDHcw==
+gridsome@^0.7.18:
+  version "0.7.18"
+  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.7.18.tgz#e4ba3d8395413fed3064623b3b92902c21221440"
+  integrity sha512-d7027rpiwU+8oAYlvG+6bS1Imm5rX7YJzUd25UFXbYj/YdcAdTx3eXUsQigcayYhvtACNcephUsCNU25Eyv37w==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.0.0"
