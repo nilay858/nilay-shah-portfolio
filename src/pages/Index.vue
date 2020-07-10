@@ -118,14 +118,22 @@
           </p>
 
           <div class="text-lg sm:text-lg mb-16">
-            <!-- <form
+            <form
               name="contact"
-              method="POST"
-              class="mb-12"
-              data-netlify-recaptcha="true"
+              method="post"
+              v-on:submit.prevent="handleSubmit"
+              action="/success/"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
             >
               <div class="flex flex-wrap mb-6 -mx-4">
+                <input type="hidden" name="form-name" value="contact" />
+                <p hidden>
+                  <label>
+                    Don’t fill this out:
+                    <input name="bot-field" />
+                  </label>
+                </p>
                 <div class="w-full md:w-1/2 mb-6 md:mb-0 px-4">
                   <label class="block mb-2 text-copy-primary" for="name">Name</label>
 
@@ -133,6 +141,7 @@
                     type="text"
                     name="name"
                     id="name"
+                    v-model="formData.name"
                     placeholder="Jon Snow"
                     class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4"
                     required
@@ -146,6 +155,7 @@
                     type="email"
                     name="email"
                     id="email"
+                    v-model="formData.email"
                     placeholder="email@example.com"
                     class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4"
                     required
@@ -160,13 +170,12 @@
                   id="message"
                   rows="5"
                   name="message"
+                  v-model="formData.message"
                   class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none appearance-none focus:border-green-700 mb-2 px-4 py-4"
                   placeholder="Enter your message here."
                   required
                 ></textarea>
               </div>
-
-              <div data-netlify-recaptcha="true"></div>
 
               <div class="flex justify-end w-full">
                 <input
@@ -175,38 +184,6 @@
                   class="block bg-green-700 hover:bg-green-800 text-white text-sm font-semibold tracking-wide uppercase shadow rounded cursor-pointer px-6 py-3"
                 />
               </div>
-            </form>-->
-            <form name="contact" method="POST" data-netlify="true">
-              <p>
-                <label>
-                  Your Name:
-                  <input type="text" name="name" />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Your Email:
-                  <input type="email" name="email" />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Your Role:
-                  <select name="role[]" multiple>
-                    <option value="leader">Leader</option>
-                    <option value="follower">Follower</option>
-                  </select>
-                </label>
-              </p>
-              <p>
-                <label>
-                  Message:
-                  <textarea name="message"></textarea>
-                </label>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
             </form>
           </div>
         </div>
@@ -338,6 +315,11 @@ export default {
   },
   data () {
     return {
+      formData: {
+        name: '',
+        email: '',
+        message: ''
+      },
       items: [
         {
           title: '​Automatic load frequency control of two area power system with conventional and fuzzylogic control',
@@ -375,6 +357,25 @@ export default {
           firm: '2017 International Conference on Smart grids, Power and Advanced Control'
         },
       ]
+    }
+  },
+  methods: {
+    encode (data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+    },
+    handleSubmit (e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
+        }),
+      })
+        .then(() => this.$router.push('/success'))
+        .catch(error => alert(error))
     }
   }
 }
