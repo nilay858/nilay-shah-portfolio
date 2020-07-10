@@ -110,11 +110,9 @@
           </div>
 
           <p class="mb-12">
-            Static sites cannot submit forms on their own. However, services like
-            <a
-              href="https://www.netlify.com/docs/form-handling"
-            >Netlify Forms</a> or
-            <a href="https://formspree.io">FormSpree</a> can help you do this without a backend.
+            Feel Free to Contact me over
+            <a href="mailto:nilayshah.elect@svitvasad.ac.in">Email</a> or
+            <a href="#">Linked In</a> also.
           </p>
 
           <div class="text-lg sm:text-lg mb-16">
@@ -374,7 +372,7 @@ export default {
           ...this.formData,
         }),
       })
-        // .then(() => this.$router.push('/success'))
+        .then(() => this.$router.push('/success'))
         .catch(error => alert(error))
     }
   }
