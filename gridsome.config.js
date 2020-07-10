@@ -79,15 +79,15 @@ module.exports = {
 
         // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
         manifestPath: "manifest.json",
-        title: "Gridsome",
+        title: "Nilay Shah",
         startUrl: "/",
         display: "standalone",
         statusBarStyle: "default",
         themeColor: "#666600",
         backgroundColor: "#ffffff",
         icon: "",
-        shortName: "Gridsome", // Optional
-        description: "Gridsome is awesome!", // Optional
+        shortName: "NilayShah", // Optional
+        description: "Nilay Shah Portfolio", // Optional
         categories: ["education"], // Optional
         lang: "en-GB", // Optional
         dir: "auto", // Optional
@@ -110,6 +110,17 @@ module.exports = {
         // Apple MacOS Meta Tags
         appleMaskIcon: "favicon.png", // Optional
         appleMaskIconColor: "#666600", // Optional
+      },
+    },
+    {
+      use: "gridsome-plugin-manifest",
+      options: {
+        background_color: "#000000",
+        icon_path: "./src/favicon.png",
+        name: "Nilay Shah",
+        short_name: "NilayShah",
+        theme_color: "#FFFFFF",
+        lang: "en",
       },
     },
   ],
