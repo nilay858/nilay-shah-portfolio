@@ -16,10 +16,10 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", default: ["material"] }
-      - {
-          label: "Files",
-          name: "files",
-          widget: "list",
-          summary: "{{ fields.file }}",
-          field: { label: File, name: file, widget: file, allow_add: true },
-        }
+      # - {
+      #     label: "Files",
+      #     name: "files",
+      #     widget: "list",
+      #     summary: "{{ fields.file }}",
+      #     field: { label: File, name: file, widget: file, allow_add: true },
+      #   }
