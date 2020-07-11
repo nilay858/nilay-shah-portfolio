@@ -13,14 +13,13 @@
     "@gridsome/vue-remark": "^0.2.2",
     "axios": "^0.19.2",
     "gridsome": "^0.7.18",
-    "gridsome-plugin-pwa": "^0.0.18",
     "gridsome-plugin-remark-shiki": "^0.3.1",
     "gridsome-plugin-rss": "^1.2.0",
+    "netlify-cms": "^2.10.52",
     "vue-fuse": "^2.2.1",
     "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
-    "gridsome-plugin-manifest": "^0.3.5",
     "gridsome-plugin-tailwindcss": "^3.0.1"
   }
 }
