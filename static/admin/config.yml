@@ -13,7 +13,13 @@ collections:
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", default: ["material"] }
+      - {
+          label: "Files",
+          name: "files",
+          widget: "list",
+          summary: "{{ fields.file }}",
+          field: { label: File, name: file, widget: file, allow_add: true },
+        }
