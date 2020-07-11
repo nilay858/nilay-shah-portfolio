@@ -32,9 +32,9 @@
           class="uppercase tracking-wide font-bold w-full block flex-grow lg:space-x-8 space-y-6 lg:space-y-0 lg:flex lg:flex-initial lg:w-auto items-center mt-8 lg:mt-0"
           :class="isOpen ? 'block': 'hidden'"
         >
-          <!-- <li class="mb-6 lg:mb-0">
+          <li class="mb-6 lg:mb-0">
             <search-input />
-          </li>-->
+          </li>
           <li>
             <theme-switcher :theme="theme" @themeChanged="updateTheme" />
           </li>
@@ -68,10 +68,10 @@
           </li>
           <!-- <li>
             <g-link to="/docs" class="text-copy-primary hover:text-gray-600">Docs</g-link>
-          </li>
+          </li>-->
           <li>
             <g-link to="/blog" class="text-copy-primary hover:text-gray-600">Blog</g-link>
-          </li>-->
+          </li>
         </ul>
       </nav>
     </header>
